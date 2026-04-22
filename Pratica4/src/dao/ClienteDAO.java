@@ -7,6 +7,7 @@ package dao;
 import factory.ConnectionFactory;
 import java.sql.*;
 import java.sql.PreparedStatement;
+import modelo.Cliente;
 
 public class ClienteDAO {
     private Connection connection;
@@ -20,10 +21,10 @@ public class ClienteDAO {
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setString(1, cliente.getNome());
-            stmt.setString(2, cliente.getcpf());
+            stmt.setString(2, cliente.getCpf());
             stmt.setDate(3, Date.valueOf(cliente.getDataNascimento()));
             stmt.setString(4, cliente.getTelefone());
-            stmt.setString(5, cliente.getEstado());
+            stmt.setString(5, cliente.getEndereco());
             stmt.setString(6, cliente.getBairro());
             stmt.setString(7, cliente.getCidade());
             stmt.setString(8, cliente.getEstado());

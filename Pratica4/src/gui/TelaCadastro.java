@@ -15,6 +15,14 @@ public class TelaCadastro extends javax.swing.JFrame {
      */
     public TelaCadastro() {
         initComponents();
+        
+        try {
+        javax.swing.text.MaskFormatter mascara = new javax.swing.text.MaskFormatter("##/##/####");
+        mascara.setPlaceholderCharacter('_');
+        mascara.install(tfDataNasc); // instala no campo existente
+        } catch (java.text.ParseException e) {
+        e.printStackTrace();
+        }
     }
 
     /**
@@ -70,12 +78,10 @@ public class TelaCadastro extends javax.swing.JFrame {
         setBackground(new java.awt.Color(204, 204, 204));
         setForeground(new java.awt.Color(204, 204, 204));
         setLocation(new java.awt.Point(0, 0));
-        setMaximumSize(new java.awt.Dimension(620, 520));
-        setPreferredSize(new java.awt.Dimension(620, 520));
         setSize(new java.awt.Dimension(620, 520));
 
         jPanel1.setBackground(new java.awt.Color(232, 232, 255));
-        jPanel1.setMaximumSize(new java.awt.Dimension(521, 520));
+        jPanel1.setPreferredSize(new java.awt.Dimension(650, 650));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 51, 153));
@@ -86,6 +92,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         jPanel2.setForeground(new java.awt.Color(204, 204, 204));
         jPanel2.setToolTipText("Cadastrar Novo Cliente");
         jPanel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jPanel2.setPreferredSize(new java.awt.Dimension(650, 650));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -192,7 +199,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel5)
                                 .addGap(18, 18, 18)
-                                .addComponent(tfDataNasc, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(tfDataNasc, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -259,12 +266,12 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(158, 158, 158)
                     .addComponent(jLabel10)
-                    .addContainerGap(190, Short.MAX_VALUE)))
+                    .addContainerGap(222, Short.MAX_VALUE)))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(202, 202, 202)
                     .addComponent(jLabel15)
-                    .addContainerGap(146, Short.MAX_VALUE)))
+                    .addContainerGap(178, Short.MAX_VALUE)))
         );
 
         tfNome.getAccessibleContext().setAccessibleName("tfNome");
@@ -274,6 +281,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         btnConsultar.setForeground(new java.awt.Color(255, 255, 255));
         btnConsultar.setText("Consultar");
         btnConsultar.setAutoscrolls(true);
+        btnConsultar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnConsultar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnConsultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -285,6 +293,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         btnCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnCadastrar.setForeground(new java.awt.Color(255, 255, 255));
         btnCadastrar.setAutoscrolls(true);
+        btnCadastrar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnCadastrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCadastrar.setLabel("Cadastrar");
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -298,6 +307,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         btnAlterar.setForeground(new java.awt.Color(51, 51, 51));
         btnAlterar.setActionCommand("Alterar");
         btnAlterar.setAutoscrolls(true);
+        btnAlterar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAlterar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAlterar.setLabel("Alterar");
         btnAlterar.addActionListener(new java.awt.event.ActionListener() {
@@ -311,6 +321,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         btnExcluir.setForeground(new java.awt.Color(255, 255, 255));
         btnExcluir.setText("Excluir");
         btnExcluir.setAutoscrolls(true);
+        btnExcluir.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnExcluir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -347,13 +358,13 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -363,14 +374,14 @@ public class TelaCadastro extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 608, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE)
                 .addGap(16, 16, 16))
         );
 
@@ -378,44 +389,55 @@ public class TelaCadastro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
-        Cliente cliente = new Cliente();
-            cliente.setNome(tfNome.getText());
-            cliente.setCpf(tfCpf.getText());
-            cliente.setDataNascimento(tfDataNasc.getText());
-            cliente.setTelefone(tfTelefone.getText());
-            cliente.setEndereco(tfEndereco.getText());
-            cliente.setBairro(tfBairro.getText());
-            cliente.setCidade(tfCidade.getText());
-            cliente.setEstado(tfEstado.getText());
-            cliente.setCep(tfCep.getText());
-            
-        if (tfNome.getText().isEmpty() ||
-            tfCpf.getText().isEmpty() ||
-            tfDataNascimento.getText().isEmpty() ||
-            tfTelefone.getText().isEmpty() ||
-            tfEndereco.getText().isEmpty() ||
-            tfBairro.getText().isEmpty() ||
-            tfCidade.getText().isEmpty() ||
-            tfEstado.getText().isEmpty() ||
-            tfCep.getText().isEmpty()) {
 
-            JOptionPane.showMessageDialog(null, "Preencha todos os campos!");
-                return;
-        }
-        else{
-            ClienteDAO dao = new ClienteDAO();
-            dao.adiciona(cliente);
-            JOptionPane.showMessageDialog(null, "Cliente "+tfNome.getText()+" inserido com sucesso!");
-        }
+    if (tfNome.getText().isEmpty() ||
+        tfCpf.getText().isEmpty() ||
+        tfDataNasc.getText().replace("/", "").replace("_", "").trim().isEmpty() ||
+        tfTelefone.getText().isEmpty() ||
+        tfEndereco.getText().isEmpty() ||
+        tfBairro.getText().isEmpty() ||
+        tfCidade.getText().isEmpty() ||
+        tfEstado.getText().isEmpty() ||
+        tfCep.getText().isEmpty()) {
+        
+        JOptionPane.showMessageDialog(null, "Preencha todos os campos!");
+        return;
+    }
+
+    try {
+        java.time.format.DateTimeFormatter fmt = java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        java.time.LocalDate dataNasc = java.time.LocalDate.parse(tfDataNasc.getText(), fmt);
+
+        Cliente cliente = new Cliente();
+        cliente.setNome(tfNome.getText());
+        cliente.setCpf(tfCpf.getText());
+        cliente.setDataNascimento(dataNasc);
+        cliente.setTelefone(tfTelefone.getText());
+        cliente.setEndereco(tfEndereco.getText());
+        cliente.setBairro(tfBairro.getText());
+        cliente.setCidade(tfCidade.getText());
+        cliente.setEstado(tfEstado.getText());
+        cliente.setCep(tfCep.getText());
+        
+        ClienteDAO dao = new ClienteDAO();
+        dao.adiciona(cliente);
+
+        JOptionPane.showMessageDialog(null, "Cliente " + cliente.getNome() + " cadastrado com sucesso!");
+
+        
         tfNome.setText("");
         tfCpf.setText("");
-        tfDataNasc.setText("");
+        tfDataNasc.setValue("");
         tfTelefone.setText("");
         tfEndereco.setText("");
         tfBairro.setText("");
         tfCidade.setText("");
         tfEstado.setText("");
-        tf.setText("");
+        tfCep.setText("");
+
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "Erro: " + e.getMessage());
+    }
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     private void btnConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarActionPerformed

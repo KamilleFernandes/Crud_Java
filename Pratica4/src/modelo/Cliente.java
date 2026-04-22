@@ -10,6 +10,10 @@ import java.time.LocalDate;
  * @author Fatec
  */
 public class Cliente {
+    
+    public void setId (int id) {
+        this.id = id; 
+    }
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -45,6 +49,10 @@ public class Cliente {
 
     public void setCep(String cep) {
         this.cep = cep;
+    }
+    
+    public int getId() {
+        return id;
     }
 
     public String getNome() {
@@ -82,6 +90,7 @@ public class Cliente {
     public String getCep() {
         return cep;
     }
+    private int id;
     private String nome;
     private String cpf;
     private LocalDate dataNascimento;
