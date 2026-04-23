@@ -6,6 +6,7 @@ package gui;
 
 
 import dao.ClienteDAO;
+import java.util.ArrayList;
 import modelo.Cliente;
 import javax.swing.JOptionPane;
 public class TelaCadastro extends javax.swing.JFrame {
@@ -421,6 +422,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         
         ClienteDAO dao = new ClienteDAO();
         dao.adiciona(cliente);
+        
 
         JOptionPane.showMessageDialog(null, "Cliente " + cliente.getNome() + " cadastrado com sucesso!");
 
