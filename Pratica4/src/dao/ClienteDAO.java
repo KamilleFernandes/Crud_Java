@@ -5,6 +5,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import modelo.Cliente;
 
+
 public class ClienteDAO {
     private Connection connection;
     private static ArrayList<Cliente> clientes = new ArrayList<>();
