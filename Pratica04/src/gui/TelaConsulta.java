@@ -271,9 +271,9 @@ public class TelaConsulta extends javax.swing.JFrame {
 
         if (confirma == JOptionPane.YES_OPTION) {
             ClienteDAO dao = new ClienteDAO();
-            dao.excluir(c.getId());      // remove do banco
-            clientes.remove(linha);       // remove do vetor
-            preencherTabela("", "");      // atualiza a tabela
+            dao.excluir(c.getId()); 
+            clientes.remove(linha);     
+            preencherTabela("", "");      
             JOptionPane.showMessageDialog(this, "Cliente excluído com sucesso!");
         }
         } else {

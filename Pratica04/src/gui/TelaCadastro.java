@@ -20,7 +20,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         try {
         javax.swing.text.MaskFormatter mascara = new javax.swing.text.MaskFormatter("##/##/####");
         mascara.setPlaceholderCharacter('_');
-        mascara.install(tfDataNasc); // instala no campo existente
+        mascara.install(tfDataNasc);
         } catch (java.text.ParseException e) {
         e.printStackTrace();
         }
