@@ -51,6 +51,10 @@ public class Cliente {
         this.cep = cep;
     }
     
+    public void setStatus (boolean status) {
+        this.status = status;
+    }
+    
     public int getId() {
         return id;
     }
@@ -90,6 +94,10 @@ public class Cliente {
     public String getCep() {
         return cep;
     }
+    
+    public boolean getStatus() {
+        return status;
+    }
     private int id;
     private String nome;
     private String cpf;
@@ -100,4 +108,5 @@ public class Cliente {
     private String cidade;
     private String estado;
     private String cep;
+    private boolean status;
 }

@@ -17,7 +17,7 @@ public class ClienteDAO {
     }
     
     public void adiciona(Cliente cliente){
-        String sql = "INSERT INTO cliente(nome,cpf,data_nascimento,telefone,endereco,bairro,cidade,estado,cep) VALUES (?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO cliente(nome,cpf,data_nascimento,telefone,endereco,bairro,cidade,estado,cep, status) VALUES (?,?,?,?,?,?,?,?,?,"ativo")";
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setString(1, cliente.getNome());
